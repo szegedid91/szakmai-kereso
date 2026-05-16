@@ -4,6 +4,7 @@ import { Search as SearchIcon, MapPin } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { Input } from "@/components/ui/input";
 import ProfessionalCard, { type Professional } from "@/components/ProfessionalCard";
+import { APP_VERSION, BUILD_DATE } from "@/version";
 
 export default function SearchPage() {
   const [profession, setProfession] = useState("");
@@ -80,6 +81,10 @@ export default function SearchPage() {
           </>
         )}
       </section>
+
+      <p className="pb-6 text-center text-[10px] text-muted-foreground/70">
+        v{APP_VERSION} · {BUILD_DATE}
+      </p>
     </div>
   );
 }
