@@ -14,7 +14,7 @@ export default function Layout() {
 
   return (
     <div
-      className="min-h-screen bg-background text-foreground md:flex"
+      className="h-screen bg-background text-foreground md:flex"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       {/* Desktop sidebar */}
@@ -45,7 +45,7 @@ export default function Layout() {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 pb-20 md:pb-0">
+      <main className="flex-1 overflow-y-auto pb-20 md:pb-0">
         <Outlet />
       </main>
 
