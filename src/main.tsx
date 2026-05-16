@@ -5,6 +5,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "sonner";
 import "./styles.css";
 
+// Register safe area plugin (configured via capacitor.config.ts; no-op on web)
+import "@capacitor-community/safe-area";
+
 import Layout from "./components/Layout";
 import SearchPage from "./pages/Search";
 import SavedPage from "./pages/Saved";

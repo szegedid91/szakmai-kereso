@@ -138,10 +138,6 @@
     border-color: var(--color-border);
   }
 
-  html, body {
-    padding-top: env(safe-area-inset-top);
-  }
-
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
