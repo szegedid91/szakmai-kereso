@@ -14,7 +14,7 @@ export default function Layout() {
 
   return (
     <div
-      className="h-screen bg-background text-foreground md:flex"
+      className="h-screen overflow-hidden bg-background text-foreground md:flex"
       style={{ paddingTop: "env(safe-area-inset-top)" }}
     >
       {/* Desktop sidebar */}
