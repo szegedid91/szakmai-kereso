@@ -13,7 +13,13 @@ export default function Layout() {
   const hideNav = location.pathname.startsWith("/szakember/");
 
   return (
-    <div className="min-h-screen bg-background text-foreground md:flex">
+    <div
+      className="min-h-screen bg-background text-foreground md:flex"
+      style={{
+        paddingTop: "env(safe-area-inset-top)",
+        paddingBottom: "env(safe-area-inset-bottom)",
+      }}
+    >
       {/* Desktop sidebar */}
       <aside className="hidden md:flex md:w-64 md:flex-col md:border-r md:border-border md:bg-card">
         <div className="px-6 py-8">
@@ -42,7 +48,7 @@ export default function Layout() {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 pb-20 md:pb-0" style={{ paddingTop: "env(safe-area-inset-top)" }}>
+      <main className="flex-1 pb-20 md:pb-0">
         <Outlet />
       </main>
 
