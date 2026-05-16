@@ -42,7 +42,7 @@ export default function Layout() {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 pb-20 md:pb-0">
+      <main className="flex-1 pb-20 md:pb-0" style={{ paddingTop: "env(safe-area-inset-top)" }}>
         <Outlet />
       </main>
 
