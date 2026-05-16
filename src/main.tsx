@@ -5,19 +5,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "sonner";
 import "./styles.css";
 
-// Initialize safe area insets (no-op on web, applies on native iOS/Android)
-import { SafeArea } from "@capacitor-community/safe-area";
-SafeArea.enable({
-  config: {
-    customColorsForSystemBars: true,
-    statusBarColor: "#00000000",
-    statusBarContent: "dark",
-    navigationBarColor: "#00000000",
-    navigationBarContent: "dark",
-  },
-}).catch(() => {
-  // Safe to ignore on web
-});
+// Register safe area plugin (configured via capacitor.config.ts; no-op on web)
+import "@capacitor-community/safe-area";
 
 import Layout from "./components/Layout";
 import SearchPage from "./pages/Search";
